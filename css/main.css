@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Mali:ital,wght@0,300;0,600;0,700;1,500&family=Roboto:wght@400;500;700;900&display=swap");
+
+:root {
+  --color_1: #2b1211;
+  --color_2: #11abce;
+  --color_3: #d12e0a;
+  /* Fonts */
+  --mali: "Mali", cursive;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.container {
+  background: url(/assets/img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  max-width: 100%;
+}
+
+.containare-garland img {
+  width: 100vw;
+  transform: rotate(-2deg);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  animation: garland 4s infinite;
+}
+
+.container-greeting {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.container-greeting h3 {
+  font-family: "Amatic SC", cursive;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  color: var(--color_1);
+  margin-bottom: 40px;
+}
+
+.container-greeting h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  color: var(--color_2);
+}
+
+.container-greeting p {
+  font-family: var(--mali);
+  font-style: normal;
+  font-weight: bold;
+  color: var(--color_2);
+}
+
+.container-letters {
+  display: flex;
+  margin-top: 100px;
+  font-family: var(--mali);
+  font-weight: bold;
+  color: var(--color_3);
+}
+
+.container-letters p {
+  color: var(--color_3);
+  margin: 5px;
+}
+
+.container-numbers {
+  display: flex;
+  color: var(--color_3);
+  font-family: var(--mali);
+  font-weight: bold;
+}
+
+.container-balloons {
+  display: flex;
+}
+
+.balloon-2 img {
+  width: 20vw;
+  height: 20vh;
+  opacity: 0.3;
+}
+
+.balloon-3 img {
+  width: 20vw;
+  height: 20vh;
+  opacity: 0.3;
+}
+
+.air-balloon-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+.air-balloon-1 img {
+  top: 5px;
+  width: 20vw;
+  height: 20vh;
+  opacity: 0.3;
+}
+
+/* Animation */
+@keyframes garland {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.55;
+  }
+  75% {
+    opacity: 0.65;
+  }
+}
+
+/* Floating Balloons */
+.float-b-1 {
+  animation-name: float-a-b-1;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.float-b-2 {
+  animation-name: float-a-2;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.float-b-3 {
+  animation-name: float-a-3;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+@keyframes float-a-b-1 {
+  0% {
+    transform: translate(100px, 0);
+  }
+  50% {
+    transform: translate(0px, -350px);
+  }
+  75% {
+    transform: translate(0, 200px);
+  }
+}
+
+@keyframes float-a-2 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  30% {
+    transform: translate(150px, 560px);
+  }
+}
+
+@keyframes float-a-3 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  30% {
+    transform: translate(-100px, 160px);
+  }
+}
+
+/* Desktop */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .containare-garland img {
+    width: 70vw;
+  }
+
+  .container-greeting h3 {
+    font-size: 66px;
+  }
+
+  .container-greeting h1 {
+    font-size: 60px;
+  }
+
+  .container-numbers {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .containare-garland img {
+    width: 30vw;
+  }
+  .container-greeting h3 {
+    font-size: 190px;
+  }
+
+  .container-greeting h1 {
+    font-size: 190px;
+  }
+
+  .container-numbers {
+    font-size: 190px;
+  }
+  }
