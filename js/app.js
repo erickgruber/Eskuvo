@@ -4,7 +4,7 @@ var countDownDate = new Date("July 10, 2021 13:00:00").getTime();
 // Update the count down every 1 second
 var x = setInterval(function() {
 
-  // Get today's date and time
+
   var now = new Date().getTime();
     
   // Find the distance between now and the count down date
