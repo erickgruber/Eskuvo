@@ -30,8 +30,9 @@ body {
 }
 
 .containare-garland img {
-  width: 100vw;
-  transform: rotate(-2deg);
+  width: 300px;
+  height: 200px;
+  transform: rotate(-25deg);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   animation: garland 4s infinite;
 }
@@ -114,9 +115,8 @@ body {
 }
 
 .air-balloon-1 img {
-  top: 5px;
-  width: 20vw;
-  height: 20vh;
+  width: 10vw;
+  height: 10vh;
   opacity: 0.3;
 }
 
@@ -139,7 +139,7 @@ body {
 /* Floating Balloons */
 .float-b-1 {
   animation-name: float-a-b-1;
-  animation-duration: 50s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
@@ -149,21 +149,21 @@ body {
   animation-duration: 30s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-}
+} 
 
 .float-b-3 {
   animation-name: float-a-3;
   animation-duration: 30s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-out;
-}
+} 
 
 @keyframes float-a-b-1 {
   0% {
-    transform: translate(100px, 0);
+    transform: translate(0, 0);
   }
   50% {
-    transform: translate(0px, -350px);
+    transform: translate(0px, 350px);
   }
   75% {
     transform: translate(0, 200px);
