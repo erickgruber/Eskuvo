@@ -1,3 +1,20 @@
+// Hamburger menu
+const menuBtn = document.querySelector('.menu-btn');
+let menuOpen = false;
+
+menuBtn.addEventListener('click',()=> {
+  if(!menuOpen){
+    menuBtn.classList.add('open');
+    menuOpen = true;
+  }else {
+    menuBtn.classList.remove('open');
+    menuOpen = false;
+  }
+});
+
+
+
+
 // Set the date we're counting down to
 var countDownDate = new Date("July 10, 2021 13:00:00").getTime();
 
@@ -26,3 +43,4 @@ var x = setInterval(function() {
     document.getElementById("container-numbers").innerHTML = "EXPIRED";
   }
 }, 1000);
+
